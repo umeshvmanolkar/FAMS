@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        style="@style/ToolBarStyle.Event"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/abc_action_bar_default_height_material" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendance Details"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title"
+                android:textColor="#fff"
+                android:textSize="26sp"
+                android:fontFamily="sans-serif-condensed"/>
+
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:id="@+id/tvNoStudents"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Select Student"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#ffb1b1b1"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif-condensed"/>
+    <LinearLayout
+        android:id="@+id/llShowStudents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tvSelectStudentHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Student"
+            android:textColor="#ff483c32"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:typeface="serif"
+            android:fontFamily="sans-serif-condensed"/>
+        <Spinner
+            android:id="@+id/spStudentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tvRegNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Student"
+            android:layout_gravity="center"
+            android:textColor="#ff483c32"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:typeface="serif"
+            android:fontFamily="sans-serif-condensed"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_margin="15dp"
+
+            >
+        </ListView>
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="There is no Attendanace details of selected student"
+                android:layout_gravity="center"
+                android:textColor="#ffff0000"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:padding="7dp"
+                android:layout_marginTop="25dp"
+                android:typeface="serif"
+                android:fontFamily="sans-serif-condensed"/>
+
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>
+
+</LinearLayout>
